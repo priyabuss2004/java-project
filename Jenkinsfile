@@ -25,6 +25,18 @@ pipeline {
               
            }  
       }
+
+
+        stage('Executing Tests'){
+            steps {
+                sh """
+                       echo "-------------Executing Testcases------------------"
+                       mvn test
+                       echo "-------------Testccases Execution Completed---------"
+                """
+              
+           }  
+      }
     
     }
 }   
